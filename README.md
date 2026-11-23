@@ -1,3 +1,20 @@
+Signal-Triggered Checkpoint and Resume for Batch Computation
+
+Project Overview
+
+This project implements a checkpoint and recovery mechanism for batch computation using Python. It is designed to prevent loss of processing progress when a program is interrupted.
+
+The application periodically saves the current processing state into a checkpoint file. If execution stops unexpectedly, the system can validate the saved checkpoint and resume processing from the last saved position instead of restarting from the beginning.
+
+It also supports signal-triggered checkpointing using Linux "SIGUSR1", manual checkpoint requests, and a web-based dashboard for monitoring processing progress.
+
+
+Problem Statement
+
+Large batch computations may take considerable time to complete. If a process crashes, is interrupted, or stops unexpectedly, the processed work may be lost and the computation may need to restart.
+
+This project addresses the problem by implementing a reliable checkpointing and recovery mechanism that saves progress, validates checkpoint integrity, and enables processing to resume efficiently.
+
 ## Key Features
 
 1. Batch processing of large datasets.
